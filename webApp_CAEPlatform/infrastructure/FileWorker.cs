@@ -40,5 +40,17 @@ public class FileWorker
             await writer.WriteLineAsync(tempText);
     }
     
-
+    /// <summary>
+    /// Подготовка файла значений координат для записи переменных.
+    /// </summary>
+    public async Task ChangeOnDefaultParametrs()
+    {   
+        string tempText;
+        //Чтение подготовленного файла.
+        using (var reader = new StreamReader(file_DefaultBlockMeshString))
+            tempText = await reader.ReadToEndAsync();
+        // полная перезапись файла.
+        await using (var writer = new StreamWriter(file_ChangeBlockMeshString, false))
+            await writer.WriteLineAsync(tempText);
+    }
 }
