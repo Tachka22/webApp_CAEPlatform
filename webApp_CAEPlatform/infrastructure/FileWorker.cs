@@ -2,6 +2,7 @@ namespace webApp_CAEPlatform.infrastructure;
 
 public class FileWorker
 {
+    //TODO:Заполнить пути к файлам.
     #region Пути к файлам.
     /// <summary>
     /// Путь к перезаписываемому файлу.
@@ -19,6 +20,10 @@ public class FileWorker
     /// Стриминговый буфер.
     /// </summary>
     private const string file_StreamingBuffer = "";
+    /// <summary>
+    /// Директория создания папок решения.
+    /// </summary>
+    private const string OpenFoamDir = "";
     #endregion
     
     /// <summary>
@@ -83,5 +88,19 @@ public class FileWorker
     {
         foreach (var item in _filesForClear)
             await File.WriteAllTextAsync(item,string.Empty);
+    }
+    /// <summary>
+    /// Проверка исполняемой дериктории на наличие прошлых решений.
+    /// </summary>
+    /// <returns></returns>
+    public bool CheckSolutionsFolder(int startTime, int endTime)
+    {
+        for (var i = startTime; i <= endTime; i++)
+        {
+            var path = string.Concat(OpenFoamDir + "/" + $"{i}");
+            if (File.Exists(path))
+                return false;
+        }
+        return true;
     }
 }
