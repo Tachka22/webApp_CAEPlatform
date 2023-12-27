@@ -22,6 +22,11 @@ public class FileWorker
     #endregion
     
     /// <summary>
+    /// Список файлов для очистки содержимого.
+    /// </summary>
+    private readonly List<string> _filesForClear = [ file_TerminalLogs, file_StreamingBuffer];
+    
+    /// <summary>
     /// Изменить значения координат для построения сетки.
     /// </summary>
     public async Task ChangeVarInFile(int changeL2,int changeL3,int changeH1,int changeH3)
@@ -70,5 +75,13 @@ public class FileWorker
     {
         using var writer = new StreamWriter(file_StreamingBuffer, true); 
         writer.WriteLine(text);
+    }
+    /// <summary>
+    /// Очистить все файлы логов прошлых решений.
+    /// </summary>
+    public async Task ClearAllFilesForLogs()
+    {
+        foreach (var item in _filesForClear)
+            await File.WriteAllTextAsync(item,string.Empty);
     }
 }
