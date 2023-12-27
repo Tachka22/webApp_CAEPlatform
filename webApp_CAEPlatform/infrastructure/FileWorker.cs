@@ -53,4 +53,22 @@ public class FileWorker
         await using (var writer = new StreamWriter(file_ChangeBlockMeshString, false))
             await writer.WriteLineAsync(tempText);
     }
+    /// <summary>
+    /// Записть в стиминговый буфер.
+    /// </summary>
+    /// <param name="text"></param>
+    public async Task WriteInBufferAsync(string text)
+    {
+        await using var writer = new StreamWriter(file_StreamingBuffer, true); 
+        await writer.WriteLineAsync(text);
+    }
+    /// <summary>
+    ///Запись в стиминговый буфер.
+    /// </summary>
+    /// <param name="text"></param>
+    public void WriteInBuffer(string text)
+    {
+        using var writer = new StreamWriter(file_StreamingBuffer, true); 
+        writer.WriteLine(text);
+    }
 }
