@@ -12,19 +12,19 @@ public class ExecuteScript
     /// <summary>
     /// Скрипт запуска решателя.
     /// </summary>
-    private const string pathTo_RunSolverScript = "";
+    private const string pathTo_RunSolverScript = "/home/vlad/Documents/csharp/webApp_CAEPlatform/webApp_CAEPlatform/bashScripts/RunSolver.sh";
     /// <summary>
     /// Скрипт очистки прошлых решений.
     /// </summary>
-    private const string pathTo_ClearLastSolutionScript = "";
+    private const string pathTo_ClearLastSolutionScript = "/home/vlad/Documents/csharp/webApp_CAEPlatform/webApp_CAEPlatform/bashScripts/ClearLastSolutions.sh";
     /// <summary>
     /// Скрипт создания сетки модели.
     /// </summary>
-    private const string pathTo_CreateMesh = "";
+    private const string pathTo_CreateMesh = "/home/vlad/Documents/csharp/webApp_CAEPlatform/webApp_CAEPlatform/bashScripts/CreateMesh.sh";
     /// <summary>
     /// Скрипт запуска приложения: "ParaView Desktop"
     /// </summary>
-    private const string pathTo_OpenParaViewDesktop = "";
+    private const string pathTo_OpenParaViewDesktop = "/home/vlad/Documents/csharp/webApp_CAEPlatform/webApp_CAEPlatform/bashScripts/OpenParaView.sh";
     #endregion
     
     private Process myProcess;
