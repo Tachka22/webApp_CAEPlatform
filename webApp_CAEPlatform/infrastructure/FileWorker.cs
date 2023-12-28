@@ -7,23 +7,23 @@ public class FileWorker
     /// <summary>
     /// Путь к перезаписываемому файлу.
     /// </summary>
-    private const string file_ChangeBlockMeshString = "";
+    private const string file_ChangeBlockMeshString = "/home/vlad/Documents/csharp/webApp_CAEPlatform/webApp_CAEPlatform/OpenFoamResources/system/blockMeshDict";
     /// <summary>
     /// Путь к файлу со стандартными настройками.
     /// </summary>
-    private const string file_DefaultBlockMeshString = "";
+    private const string file_DefaultBlockMeshString = "/home/vlad/Documents/csharp/webApp_CAEPlatform/webApp_CAEPlatform/OpenFoamResources/system/DefaultMesh";
     /// <summary>
     /// Путь к файлу записи вывода терминала.
     /// </summary>
-    private const string file_TerminalLogs = "";
+    private const string file_TerminalLogs = "/home/vlad/Documents/csharp/webApp_CAEPlatform/webApp_CAEPlatform/logs/TerminalOutput.txt";
     /// <summary>
     /// Стриминговый буфер.
     /// </summary>
-    private const string file_StreamingBuffer = "";
+    private const string file_StreamingBuffer = "/home/vlad/Documents/csharp/webApp_CAEPlatform/webApp_CAEPlatform/logs/StreamingBuffer.txt";
     /// <summary>
     /// Директория создания папок решения.
     /// </summary>
-    private const string OpenFoamDir = "";
+    private const string OpenFoamDir = "/home/vlad/Documents/csharp/webApp_CAEPlatform/webApp_CAEPlatform/OpenFoamResources";
     #endregion
     
     /// <summary>
