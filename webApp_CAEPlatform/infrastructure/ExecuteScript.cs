@@ -29,7 +29,41 @@ public class ExecuteScript
     
     private Process myProcess;
     
-    
+    /// <summary>
+    /// Открыть ParaView desktop.
+    /// </summary>
+    public async Task RunOpenParaViewDesktop()
+    {
+        await ExecuteScriptBase(pathTo_OpenParaViewDesktop);
+    }
+    /// <summary>
+    /// Очистить прошлые решения.
+    /// </summary>
+    public async Task ClearLastSolutions()
+    {
+        await ExecuteScriptBase(pathTo_ClearLastSolutionScript);
+    }
+    /// <summary>
+    /// Запустить решатель.
+    /// </summary>
+    public async Task RunSolver()
+    {
+        await ExecuteScriptBase(pathTo_RunSolverScript);
+    }
+    /// <summary>
+    /// Создать сетку.
+    /// </summary>
+    public async Task CreateMesh()
+    {
+        await ExecuteScriptBase(pathTo_CreateMesh);
+    }
+    /// <summary>
+    /// Отмена выполнения.
+    /// </summary>
+    public void CancelRun()
+    {
+        //TODO:Написать скрипт отмены операции
+    }
     
     /// <summary>
     /// Базовый метод исполнения скриптов.
