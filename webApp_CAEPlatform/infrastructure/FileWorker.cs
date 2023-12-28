@@ -103,4 +103,13 @@ public class FileWorker
         }
         return true;
     }
+    /// <summary>
+    /// Проверка на созданние сетки
+    /// </summary>
+    /// <returns></returns>
+    public bool CheckCreatedMesh()
+    {
+        var lines = File.ReadAllLines(file_TerminalLogs);
+        return lines.Any(s => s == "End");
+    }
 }
