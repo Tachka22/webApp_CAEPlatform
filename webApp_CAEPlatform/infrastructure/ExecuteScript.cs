@@ -4,9 +4,9 @@ namespace webApp_CAEPlatform.infrastructure;
 
 public class ExecuteScript
 {
-    //TODO:Заполнить пути.
+    
     #region Пути к файлам логирования терминала
-    private const string pathTo_TerminalLogs = "";
+    private const string pathTo_TerminalLogs = "/home/vlad/Documents/csharp/webApp_CAEPlatform/webApp_CAEPlatform/logs/TerminalOutput.txt";
     #endregion
     #region Пути к исполняемым файлам.
     /// <summary>
